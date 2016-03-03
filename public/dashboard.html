@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="event.js"></script>
+
+	<style type="text/css">
+	  html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    
+    #pac-input {
+      background-color: #fff;
+      font-family: Roboto;
+      font-size: 15px;
+      font-weight: 300;
+      margin-left: 12px;
+      padding: 0 11px 0 13px;
+      text-overflow: ellipsis;
+      width: 300px;
+    }
+    
+    #pac-input:focus {
+      border-color: #4d90fe;
+    }
+    
+    .pac-container {
+      font-family: Roboto;
+    }
+    
+    #type-selector {
+      color: #fff;
+      background-color: #4d90fe;
+      padding: 5px 11px 0px 11px;
+    }
+    
+    #type-selector label {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    
+    #target{
+      width: 345px;
+    }
+     
+	</style>
+
+</head>
+<body>
+  
+  <!--The logout link which redirects back to the landing page.-->
+  <a href="/logout">Log Out</a>
+  
+  <!--This is the google maps autocomplete input box.-->
+  <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+
+  <!--Event table for event placement.-->
+	<table class="eventsTable">
+		<thead>
+			<tr>
+				<th>Artist Name</th>
+				<th>Event Name</th>
+				<th>Location</th>
+				<th>Event Date</th>
+				<th>More Information</th>
+			</tr>
+		</thead>
+		
+		<!--Location for events to be appended.-->
+		<tbody class="resultsBody">
+			
+		</tbody>
+		
+	</table>
+
+  <!--Script tags for dashboardApp.js and for google maps places library and initMap-->
+	<script type="text/javascript" src="dashboardApp.js"></script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=---------ENTER GOOGLE API KEY----------&libraries=places&callback=locationAutocomplete"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Passport-Spotify Example</title>
+		<style type="text/css">
+		
+			@font-face{
+				
+				font-family:'AdobeGaramond';
+				src: url('fonts/adobe-garamond-pro/Adobe-Garamond-Pro-Bold-Italic_2007.ttf')format('truetype'),
+				url('fonts/adobe-garamond-pro/Adobe-Garamond-Pro-Bold_2008.ttf')format('truetype'),
+				url('fonts/adobe-garamond-pro/Adobe-Garamond-Pro-Italic_2009.ttf')format('truetype'),
+				url('fonts/adobe-garamond-pro/Adobe-Garamond-Pro-Semibold-Italic_2010.ttf')format('truetype'),
+				url('fonts/adobe-garamond-pro/Adobe-Garamond-Pro-Semibold_2011.ttf')format('truetype'),
+				url('fonts/adobe-garamond-pro/Adobe-Garamond-Pro_2012.ttf')format('truetype');
+
+			}
+		
+			body{
+				margin: 0;
+				border: 0;
+				
+			}
+			
+			nav{
+				width: 100%;
+				height: 3em;
+				background-color: black;
+				position: fixed;
+
+			}
+			
+			.navSignIn{
+				cursor: pointer;
+			    font-weight: bold;
+			    border-radius: 7px;
+			    border: 2px solid black;
+			    border: none;
+			    width: 5em;
+			    height: 2em;
+			    background-color: #00CC33;	
+			    -webkit-transition: background 0.5s linear, color 0.5s linear;
+			    -moz-transition: background 0.5s linear, color 0.5s linear;
+			    -o-transition: background 0.5s linear, color 0.5s linear;
+			    transition: background 0.5s linear, color 0.5s linear;
+
+			}
+			
+			.navSignIn:hover{
+				background-color: white;
+				color: green;
+				
+			}
+			
+			h1{
+			margin: 0 auto;
+		    color: white;
+		    font-family: 'Adobe-Garamond-Pro-Semibold_2011';
+		    padding-top: 6em;
+		    letter-spacing: 0.02em;
+		    font-size: 1.75em;
+		    width: 10em;
+		    text-align: center;
+		    line-height: 1.3em;
+		    -webkit-font-smoothing: antialiased;
+
+			}
+			
+			ul{
+				padding-top: 0.5em;
+				margin: 0;
+				float: right;
+				margin-right: 1em;
+			}
+			
+			li{
+				cursor: pointer;
+				padding-left:0.25em;
+				display: inline-block;
+				-webkit-font-smoothing: antialiased;
+				color:rgb(131, 137, 148);
+				list-style-type:none;
+			}
+			
+			.mainContainer{
+				
+				width: 100%;
+				height: 36em;
+				background-color: black;
+				background-position-x: -18em;
+				background-image: url('images/capstoneLandingPage1x.jpg');
+			}
+		
+			.centerContainer{
+				margin: 6em auto;
+   				width: 10.5em;
+			}
+			
+			@media screen and (min-width: 600px) {
+				
+				.mainContainer{
+					width: 100%;
+					height: 43em;
+					background-position-x: 0em;
+					background-image: url('images/capstoneLandingPage2x.jpg');
+				}
+				
+				h1 {
+				    padding-top: 3em;
+				    font-size: 3.75em;
+				}
+				
+				li{
+					padding-left: 0.5em;
+				}
+				
+				
+				.centerContainer{
+					width: 17em;
+				    margin-top: 8em;
+				}
+				
+			}
+				
+			@media screen and (min-width: 1160px){
+				.mainContainer{
+					width: 100%;
+					height: 43em;
+					background-position-x: 0em;
+					background-image: url('images/capstoneLandingPage3x.jpg');
+				}
+				
+				h1 {
+				    padding-top: 1.5em;
+				    font-size: 5em;
+				}
+				
+
+				
+				.centerContainer{
+				   width: 20em;
+ 				   margin-top: 13em;
+				}
+			}
+		</style>
+		
+		<!--Jquery and script.js script tags.-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	
+	<body>
+		<!--Navigation Bar-->
+		<nav>
+			<!--Navigation links-->
+			<ul>
+				<li>What?</li>
+				<li>Contact</li>
+				<!--Alternate SignIn Link-->
+				<li><input class="navSignIn" type="button" value="Try Me"/></li>
+			</ul>
+		</nav>
+		
+		
+		<div class="mainContainer">
+			<h1>Search By Your Taste In Music</h1>
+			<div class="centerContainer">
+				<!--Main SignIn Button.-->
+				<a href="/auth/spotify"><img class="spotifyLoginImage" src="images/log_in-desktop.svg"></img></a>
+			</div>
+		</div>
+
+	</body>
+</html>
